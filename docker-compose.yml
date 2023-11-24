@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: project-3a-class-image
+    container_name: Project-3a
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_DEBUG: "1"
